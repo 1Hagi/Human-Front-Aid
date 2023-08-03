@@ -10,10 +10,10 @@
     <link rel="icon" type="image/x-icon" href="/Image/Layout/logo.ico">
 
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com"/>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;600;700;900&display=swap" rel="stylesheet">
 
     <!-- Bootstrap v5.3 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous"/>
@@ -28,7 +28,7 @@
 
 </head>
 
-<body>
+<body data-section="about">
 
     <!-- ┌─────────────────────────────────────────────────────────┐ -->
     <!-- │ ■■■■■■■■■■■■■■■■■■■■ INICIO HEADER ■■■■■■■■■■■■■■■■■■■■ │ -->
@@ -38,13 +38,13 @@
     <!-- │ ► Luis Romano                                           │ -->
     <!-- └─────────────────────────────────────────────────────────┘ -->
 
-    <header>
+    <header class="desktop">
 
         <!--  Header - Sección Navbar  -->
 
         <div class="navbar-contenedor-principal">
 
-            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <nav class="navbar navbar-expand bg-body-tertiary navbar-mobile">
 
                 <!--  Contenedor del Navbar  -->
 
@@ -59,12 +59,12 @@
                     <!--  Opciones de Navegación  -->
                     <div class="collapse navbar-collapse navbar-contenido" id="navbarNavAltMarkup">
                         <div class="navbar-nav ms-auto">
-                            <a class="nav-link navbar-link navbar-home" href="../index.html">Home</a>
-                            <a class="nav-link navbar-link navbar-about-us" href="#">About us</a>
+                            <a class="nav-link navbar-link navbar-home" href="../index.html" data-translate="home">Home</a>
+                            <a class="nav-link navbar-link navbar-about-us" href="./about-us.html" data-translate="about">About us</a>
                           
-                            <a href="./need-help.html" class="btn btn-primary navbar-need-help">Need help?</a>
+                            <a class="btn btn-primary navbar-need-help" href="./need-help.html" data-translate="needHelp">Need help?</a>
                    
-                            <a type="button" class="btn btn-warning navbar-donate" href="./want-to-help.html">DONATE</a>
+                            <a class="btn btn-warning navbar-donate" href="./want-to-help.html" data-translate="DONATE">DONATE</a>
                         </div>
                     </div>
                 </div>
@@ -72,7 +72,7 @@
 
             <!--  Header - Sección idiomas  -->
 
-            <div class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="navbar navbar-expand bg-body-tertiary">
 
                 <div class="container-fluid contenedor-idiomas">
 
@@ -80,9 +80,9 @@
                         <div class="navbar-nav ms-auto">
 
                             <!-- Opción Ukrania -->
-                            <button type="button" class="btn btn-primary navbar-ikp">IKP</button>
+                            <button type="button" onclick="changeLanguage('language_uc_data'); return false;" class="btn btn-primary navbar-ykp">YKP</button>
                             <!-- Opción Inglés -->
-                            <button type="button" class="btn btn-warning navbar-en">EN</button>
+                            <button type="button" onclick="changeLanguage('language_en_data'); return false;" class="btn btn-warning navbar-en">EN</button>
                         </div>
                     </div>
                 </div>
@@ -91,18 +91,16 @@
             <!--  Header - Sección Título  -->
 
             <div class="header-div">
-                <h2 class="header-titulo">About us</h2>
-                <p class="header-subtitulo">
-                    Know more about our <strong>mission</strong>,<br />
-                    <strong>projects</strong> and <strong>history.</strong>
-                </p>
+                <h2 class="header-titulo" data-translate="about">About us</h2>
+                <p class="header-subtitulo" data-translate="headerSubtitle1">
+                    Know more about our <strong data-translate="headerSubtitleStrong1">mission, projects</strong><span data-translate="headerSubtitle2">and </span><strong data-translate="headerSubtitleStrong2">history.</strong></p>
             </div>
 
             <!--  Header - Sección Backgrond  -->
             
             <!--  Imagen de fondo  -->
 
-            <img class="header-background-imagen" src="../Image/header-about-us.png" alt="About Us">
+            <img class="header-background-imagen" src="../Image/bg-about-us-desktop.png" alt="home_img">
 
             <!--  Máscara de filtro azul  -->
 
@@ -111,6 +109,74 @@
             <!--  Efecto wave  -->
 
             <img class="wave" src="../Image/wave.png" alt="" />
+        
+        </div>
+
+    </header>
+
+    <!-- Header Mobile Version -->
+
+    <header class="mobile">
+
+        <nav class="navbar navbar-expand-lg bg-body-tertiary mobile-navbar-container">
+            <div class="container-fluid">
+
+                <!-- Navbar - Menu options -->
+
+                <a class="nav-link dropdown-toggle-nav" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="../Image/menuphone.png"/>
+                </a>
+                <ul class="dropdown-menu dropdown-navigation">
+                    <li><a class="dropdown-item dropdown-item-nav" href="../index.html" data-translate="home">Home</a></li>
+                    <li><a class="dropdown-item dropdown-item-nav" href="./about-us.html" data-translate="about">About us</a></li>
+                    <li><a class="dropdown-item dropdown-item-nav" href="./need-help.html" data-translate="needHelp">Need Help</a></li>
+                    <li><a class="dropdown-item dropdown-item-nav" href="./want-to-help.html" data-translate="wantToHelp">Want to Help</a></li>
+                </ul>
+
+                <!-- Navbar - Languages options -->
+
+                <a class="nav-link dropdown-toggle-lang" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="../Image/carbon_overflow-menu-vertical.png"/>
+                </a>
+                <ul class="dropdown-menu dropdown-languages">
+                    <li><a class="dropdown-item" onclick="changeLanguage('language_en_data'); return false;" href="#">English</a></li>
+                    <li><a class="dropdown-item" onclick="changeLanguage('language_uc_data'); return false;" href="#">Ukrainian</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Header - Optiones -->
+
+        <div class="container-fluid header-options">
+            <div class="header-options-cuadro">
+                <a class="option-donate" href="./want-to-help.html" data-translate="donate">Donate</a>
+                <a class="option-need-help" href="./need-help.html" data-translate="needHelp">Need help?</a>
+            </div>
+        </div>
+
+
+        <!-- Header - Encabezado con títulos -->
+
+        <div class="tittles-container">
+
+            <!-- Header - Background image -->
+
+            <img class="bg-home-mobile" src="../Image/bg-home-mobile.png" alt="home_img">
+
+            <!--  Máscara de filtro azul  -->
+
+            <div class="header-background-mascara"></div>
+
+            <!--  Efecto wave  -->
+            
+            <img class="wave-mobile" src="../Image/wave.png" alt="" />
+
+            <div class="titulos">
+                <h2 class="header-titulo" data-translate="about">About us</h2>
+                <p class="header-subtitulo" data-translate="headerSubtitle1">
+                    Know more about our <strong data-translate="headerSubtitleStrong1">mission, projects</strong><span data-translate="headerSubtitle2"></span>and</span><strong data-translate="headerSubtitleStrong2">history.</strong></p>
+            </div>
+            
 
         </div>
 
@@ -120,28 +186,46 @@
     <!-- │ ■■■■■■■■■■■■■■■■■■■■■ FIN HEADER ■■■■■■■■■■■■■■■■■■■■■■ │ -->
     <!-- └─────────────────────────────────────────────────────────┘ -->
 
+
+
+    <!-- ┌─────────────────────────────────────────────────────────┐ -->
+    <!-- │ ■■■■■■■■■■■■■■■■■■■■ INICIO CHATBOT ■■■■■■■■■■■■■■■■■■■ │ -->
+    <!-- │                                                         │ -->
+    <!-- │   COLABORADORES:                                        │ -->
+    <!-- │ ► Diego N. Cabrera                                      │ -->
+    <!-- └─────────────────────────────────────────────────────────┘ -->
+
+    <button class="chatbot-button"></button>
+
+    <!-- ┌─────────────────────────────────────────────────────────┐ -->
+    <!-- │ ■■■■■■■■■■■■■■■■■■■■■ FIN CHATBOT ■■■■■■■■■■■■■■■■■■■■■ │ -->
+    <!-- └─────────────────────────────────────────────────────────┘ -->
+    
+
+
     <!-- ┌─────────────────────────────────────────────────────────┐ -->
     <!-- │ ■■■■■■■■■■■■■■■■■■ INICIO ABOUT-US ■■■■■■■■■■■■■■■■■■■■ │ -->
     <!-- │                                                         │ -->
     <!-- │   COLABORADORES:                                        │ -->
+    <!-- │ ► Federico Peralta                                      │ -->
     <!-- │ ► Luis Romano                                           │ -->
-    <!-- │ ► Diego N. Cabrera                                      │ -->
+    <!-- │ ► Luis Fernando Callisaya Surco                         │ -->
     <!-- └─────────────────────────────────────────────────────────┘ -->
     
-    <section>
-        <div class="about-us-history-container">
-            <div class="about-us-history">
-                <p>
+    <section class="about-us container-fluid">
+        <div class="row col-12 about-us-main">
+            <div class="col-lg-5 col-md-5 col-12 offset-lg-1 offset-md-1 about-us-text">
+                <p data-translate="aboutUsparagraph1">
                     We are a non-bureaucratic non-profit organization, momentarily
                     working to support the Ukrainian victims of the war. The
                     co-operation with local partners in Odesa assures that we can move
                     fast and adapt to the current situation on the ground.
                 </p>
-                <p>
+                <p data-translate="aboutUsparagraph2">
                     Our intention is to support projects regionally and locally. They
                     know best what is required at any moment, and we believe this is a
                     reassurance that the resources are used in the best way possible. We
-                    will continue supporting on-going projects as long as it’s needed.
+                    will continue supporting on-going projects as long as it's needed.
                     At the same time, we have all ears and eyes open for new ways of
                     supporting as directly as we can, wherever it is. We find this
                     crucial in order to stay open to new possibilities of helping in the
@@ -149,33 +233,35 @@
                 </p>
             </div>
 
-            <div class="about-us-history">
-                <img src="../Image/history-11.png" alt="" />
+            <div class="col-lg-5 col-md-5 col-12">
+                <img class="about-us-main-img" src="../Image/history-11.png" alt="" />
             </div>
 
         </div>
 
-    <h2 class="history-titulo">History</h2>
+    <h2 class="offset-1  history-titulo" data-translate="aboutHistory">History</h2>
 
-        <div class="about-us-history-container">
-            <div class="about-us-history">
-            <img src="../Image/history2.png" alt="" />
+        <div class="row col-12 about-us-main">
+
+            <div class="col-lg-5 col-md-5 col-12 offset-lg-1 offset-md-1">
+                <img class="about-us-main-img" src="../Image/history-2.png" alt="" />
             </div>
-            <div class="about-us-history">
-            <p>
-                When the conflict started the Swiss Bänz Margot fled from Odesa to
+
+            <div class="col-lg-5 col-md-5 col-12 about-us-text">
+                <p data-translate="aboutHistoryUsparagraph1">
+                    When the conflict started the Swiss Bänz Margot fled from Odesa to
                 Moldova trying to find ways of helping from there. Visiting refugee
                 camps in Moldova, asking what was needed and also calling out for
                 financial support from outside.
-            </p>
-            <p>
-                That’s how the Human Front Aid group was founded. We have donated
+                </p>
+                <p data-translate="aboutHistoryUsparagraph2">
+                    That's how the Human Front Aid group was founded. We have donated
                 and delivered food and supplies since then.
-            </p>
-            <p>
-                Presently we are co-operating with Help to Odesa charity evacuating
-                people from places under occupation and the front line.
-            </p>
+                </p>
+                <p data-translate="aboutHistoryUsparagraph3">
+                    Presently we are co-operating with Help to Odesa charity evacuating
+                    people from places under occupation and the front line.
+                </p>
             </div>
         </div>
 
@@ -184,6 +270,7 @@
     <!-- ┌─────────────────────────────────────────────────────────┐ -->
     <!-- │ ■■■■■■■■■■■■■■■■■■■■ FIN ABOUT-US ■■■■■■■■■■■■■■■■■■■■■ │ -->
     <!-- └─────────────────────────────────────────────────────────┘ -->
+    
     
 
     <!-- ┌─────────────────────────────────────────────────────────┐ -->
@@ -194,55 +281,61 @@
     <!-- │ ► Santiago Elias Carranza                               │ -->
     <!-- └─────────────────────────────────────────────────────────┘ -->
 
-    <footer class="Secction_footer_Diego_pardo">
-        <section class="Section_footer_Diego_body">
-            <section class="Section_footer_Diego_body_title">
-                <p class="Section_footer_Diego_body_title_p">
-                    Human Front Aid
-                </p>
-            </section>
+    <footer class="footer_container">
 
-            <section class="Section_footer_Diego_body_network">
-                <section class="Section_footer_Diego_body_network_Instagram">
-                    <button class="Section_footer_Diego_body_network_Instagram_button"></button>
-                    <p class="Section_footer_Diego_body_network_instagram_p">Instagram</p>
-                </section>
-                <section class="Section_footer_Diego_body_network_Whatsapp">
-                    <button class="Section_footer_Diego_body_network_button_whatsapp"></button>
-                    <p class="Section_footer_Diego_body_network_whatsapp_p">WhatsApp</p>
-                </section>
-                <section class="Section_footer_Diego_body_network_facebook">
-                    <button class="Section_footer_Diego_body_network_facebook_button"></button>
-                    <p class="Section_footer_Diego_body_network_facebook_p">Facebook</p>
-                </section>
-            </section>
-            <hr class="Section_footer_Diego_body_network_line">
-            <div class="navbar_contenedor_principal_footer">
-                <nav class="navbar navbar-expand-lg bg-body-tertiary">
-                    <div class="container-fluid navbar-contenedor">
-                        <img class="navbar-brand navbar-logo" src="../Image/logo.png" alt="">
-                        <a class="navbar-brand navbar-titulo" href="../index.html">Human Front Aid</a>
-
-                        <div class="collapse navbar-collapse navbar-contenido" id="navbarNavAltMarkup">
-                            <div class="navbar-nav ms-auto">
-                                <a class="nav-link navbar-link navbar-home" href="#">Home</a>
-                                <a class="nav-link navbar-link navbar-about-us" href="#">About us</a>
-                                <button type="button" class="btn btn-primary navbar-need-help">Need help?</button>
-                                <button type="button" class="btn btn-warning navbar-donate">DONATE</button>
-                            </div>
-                        </div>
-                    </div>
-                </nav>
-
+        <div class="footer_redsocial">
+            <div class="footer_redsocial_instragram">
+                <a class="link-instagram" href="https://www.instagram.com/humanfrontaid/" target="_blank">
+                    <img src="../Image/Instagram_logo.png" width="35px" height="35px" alt="Icono de Instagram">
+                    <p class="link-instagram-text">Instagram</p>
+                </a>
             </div>
+            <div class="footer_redsocial_facebook">
+                <a class="link-facebook" href="https://www.facebook.com/HUMANFRONTAID/" target="_blank">
+                    <img src="../Image/Facebook_logo.png" width="35px" height="35px" alt="Icono de Facebook">
+                    <p class="link-facebook-text">Facebook</p>
+                </a>
+            </div>
+            <div class="footer_redsocial_whatsapp">
+                <a class="link-whatsapp" href="https://wa.me/+41335333344" target="_blank">
+                    <img src="../Image/WhatsApp_logo.png" width="35px" height="35px" alt="Icono de Whatsapp"> 
+                    <p class="link-whatsapp-text">Whatsapp</p>
+                </a>
+            </div>
+        </div>
 
-        </section>
+        <div class="footer_linea"></div>
+            
+        <div class="footer_routes">
+            <div class="footer_routes_logo">
+                <img src="../Image/logo.png" alt="Logo de Human Front Aid">
+                <a class="navbar-brand navbar-titulo footer-titulo" href="../index.html">Human Front Aid</a>
+            </div>
+                
+            <div class="footer_routes_container_home_navigation">
+
+                <div class="footer_routes_home-aboutUs">
+                        <a class="nav-link navbar-link navbar-home" href="../index.html" data-translate='home'>Home</a>
+                        <a class="nav-link navbar-link navbar-about-us" href="./about-us.html" data-translate='about'>About us</a>
+                </div>
+
+                <div class="footer_routes_navigation">
+
+                    <a class="btn btn-primary navbar-need-help footer-need-help" href="./need-help.html" data-translate='needHelp'>Need help?</a>
+
+                    <a class="btn btn-warning navbar-donate footer-donate" href="./want-to-help.html" data-translate='DONATE'>DONATE</a>
+
+                </div>
+            </div>
+        </div>
+    
     </footer>
 
     <!-- ┌─────────────────────────────────────────────────────────┐ -->
     <!-- │ ■■■■■■■■■■■■■■■■■■■■■ FIN FOOTER ■■■■■■■■■■■■■■■■■■■■■■ │ -->
     <!-- └─────────────────────────────────────────────────────────┘ -->
 
+    <script defer src="../js/language/language.js"></script>
 </body>
 
 </html>

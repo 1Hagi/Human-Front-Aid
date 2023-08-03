@@ -11,6 +11,16 @@
     --color-dos: #003A7D;
     --color-tres: #F8D714;
     --color-cuatro: #005BBB;
+    --color-cinco: #001C3D;
+    --color-seis: #004EAA;
+    --color-siete: #0C4180;
+    --color-ocho: #02397A;
+
+    /* Efecto de hover */
+
+    --shadow-01: 0 0 10px var(--color-uno);
+    --shadow-02: 0 0 10px var(--color-tres);
+    --shadow-03: 0 0 10px var(--color-cuatro);
 
     /* Margenes Laterales */
     --margin-desktop-1: 5.06%;
@@ -20,8 +30,33 @@
 
 html,
 body {
-  position: relative;
-  height: 100%;
-  background-color: var(--color-uno);
-  z-index: -3;
+    position: relative;
+    height: 100%;
+    background-color: var(--color-uno);
+    z-index: -3;
+    box-sizing: border-box;
+}
+
+@media (max-width: 319px ) {
+    body { display: none; }
+}
+
+@media (min-width: 320px ) and (max-width: 480px) {
+    .mobile { display: block; }
+    .desktop { display: none; }
+}
+
+@media (min-width: 481px ) and (max-width: 992px) {
+    .mobile { display: none; }
+    .desktop { display: block; }
+}
+
+@media (min-width: 993px ) and (max-width: 1299px) {
+    .mobile { display: none; }
+    .desktop { display: block; }
+}
+
+@media(min-width: 1300px) {
+    .mobile { display: none; }
+    .desktop { display: block; }
 }
