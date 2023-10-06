@@ -228,6 +228,30 @@ a {
     margin-top: -300px;
 }
 
+#icono-paypal{
+    content: url(../img/donate/icon-paypal-disabled.jpg);
+}
+
+#icono-twint{
+    content: url(../img/donate/icon-twint-disabled.jpg);
+}
+
+#icono-zahlteil{
+    content: url(../img/donate/icon-zahlteil-disabled.jpg);
+}
+
+#icono-paypal:hover{
+    content: url(../img/donate/icon-paypal-enabled.jpg);
+}
+
+#icono-twint:hover{
+    content: url(../img/donate/icon-twint-enabled.jpg);
+}
+
+#icono-zahlteil:hover{
+    content: url(../img/donate/icon-zahlteil-enabled.jpg);
+}
+
 /* Header - Botón donate */
 
 .home-btn {
@@ -300,13 +324,23 @@ a {
 /* │ ■■■■■■■■■■■■■■■■■■■■■ FIN HEADER ■■■■■■■■■■■■■■■■■■■■■■ │ */
 /* └─────────────────────────────────────────────────────────┘ */
 
+/* ┌─────────────────────────────────────────────────────────┐ */
+/* │ ■■■■■■■■■■■■■■■■■■■■ INICIO CHATBOT ■■■■■■■■■■■■■■■■■■■ │ */
+/* │                                                         │ */
+/* │   COLABORADORES:                                        │ */
+/* │ ► Diego N. Cabrera                                      │ */
+/* │ ► Manuel Florez                                         │ */
+/* └─────────────────────────────────────────────────────────┘ */
+
+/* Chatbot - sección botón */
+
 
 .chatbot-button {
     position: fixed;
     right: 3%;
     bottom: 50%;
     background-color: transparent;
-    background-image: url("../Image/btn-chatbot-mobile.png");
+    background-image: url("../img/chatbot/btn-chatbot-mobile.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -316,6 +350,20 @@ a {
     height: 60px;
     z-index: 3;
 }
+
+@media (min-width: 481px) {
+    .chatbot-button {
+        background-image: url("../img/chatbot/btn-chatbot.png");
+        width: 70px;
+        height: 70px;
+    }
+}
+
+/* ┌─────────────────────────────────────────────────────────┐ */
+/* │ ■■■■■■■■■■■■■■■■■■■■■ FIN CHATBOT ■■■■■■■■■■■■■■■■■■■■■ │ */
+/* └─────────────────────────────────────────────────────────┘ */
+
+
 
 /* ┌─────────────────────────────────────────────────────────┐ */
 /* │ ■■■■■■■■■■■■■■■■■■ INICIO CONTENIDO ■■■■■■■■■■■■■■■■■■■ │ */
@@ -697,7 +745,7 @@ a {
     /* Header - Encabezado con títulos */
 
     .tittles-container {
-        height: 698px;
+        height: 798px;
     }
 
     /* Header - Background */
@@ -705,7 +753,7 @@ a {
     .bg-home-mobile {
         position: absolute;
         width: 100%;
-        height: 700px;
+        height: 810px;
         top: 54px;
         z-index: -1;
         mix-blend-mode: multiply;
@@ -717,7 +765,7 @@ a {
     .header-background-mascara {
         position: absolute;
         width: 100%;
-        height: 758px;
+        height: 870px;
         top: 0;
         background: #02397A;
         border: 0px solid;
@@ -729,7 +777,7 @@ a {
 
     .wave-mobile {
         position: absolute;
-        top: 720px;
+        top: 830px;
         width: 100%;
     }
 
