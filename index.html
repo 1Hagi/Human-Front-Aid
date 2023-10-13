@@ -39,8 +39,7 @@
     <script defer src="js/chatbot.js"></script>
     
     <!-- VideoJS -->
-    <link href="https://vjs.zencdn.net/8.0.4/video-js.css" rel="stylesheet" />
-    <script defer src="https://vjs.zencdn.net/8.0.4/video.min.js"></script>
+    <link href="https://vjs.zencdn.net/8.5.2/video-js.css" rel="stylesheet" />
 
     <!-- SwiperJS-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
@@ -77,7 +76,7 @@
                 <div class="container-fluid navbar-contenedor">
 
                     <!--  Logo  -->
-                    <img class="navbar-brand navbar-logo" src="./img/layout/logo.png" alt="">
+                    <img class="navbar-brand navbar-logo" src="./img/layout/header_logo.png" alt="">
 
                     <!--  Título  -->
                     <a class="navbar-brand navbar-titulo" href="./index.html">Human Front Aid</a>
@@ -87,9 +86,9 @@
                         <div class="navbar-nav ms-auto">
                             <a class="nav-link navbar-link navbar-home" href="./index.html" data-translate="home" >Home</a>
                             <a class="nav-link navbar-link navbar-about-us" href="./pages/about-us.html" data-translate="about" >About us</a>
-                          
+                            
                             <a class="btn btn-primary navbar-need-help" href="./pages/need-help.html" data-translate="needHelp">Need help?</a>
-                   
+                            
                             <a class="btn btn-warning navbar-donate" href="./pages/want-to-help.html" data-translate="DONATE">DONATE</a>
                         </div>
                     </div>
@@ -119,7 +118,7 @@
             <div class="header-div">
                 <h2 class="header-titulo">Human Front Aid</h2>
                 <p class="header-subtitulo" data-translate="headerSubtitle1">
-                    Our intention is to<strong data-translate="headerSubtitleStrong">support projects regionally and locally.</strong></p><p class="header-subtitulo" data-translate="headerSubtitle2">
+                    Our intention is to <strong data-translate="headerSubtitleStrong">support projects regionally and locally.</strong></p><p class="header-subtitulo" data-translate="headerSubtitle2">
                     People knowing the local conditions can help.
                 </p>
                 <button class="home-btn" data-translate="DONATE">DONATE</button>
@@ -259,8 +258,8 @@
         <div class="chatbot-seccionwrite" onclick="chooseMessage()">
             <div class="chatbot-seccionchoose">
                 <p class="chatbot-choosetext">Choose a message</p>
-                <img class="chatbot-chooseicon mood" src="./img/chatbot/mood.png"/>
                 <img class="chatbot-chooseicon send" src="./img/chatbot/send.png"/>
+                <img class="chatbot-chooseicon mood" src="./img/chatbot/mood.png"/>
             </div>
         </div>
     </div>
@@ -301,8 +300,10 @@
                 We find this crucial in order to stay open to new possibilities
                 of helping in the most effective manner.
             </p>
+            <div class="about-btnBox">
+                <a class="about-us-texto-button" href="./pages/about-us.html" data-translate="about" type="button">About us</a>
+            </div>
             
-            <a class="about-us-texto-button" href="./pages/about-us.html" data-translate="about">About us</a>
 
         </section>
 
@@ -344,109 +345,125 @@
         <div class="swiper swiper-p mySwiperP">
             <div class="swiper-wrapper">
 
-                <div class="swiper-slide swiper-slide-p">
-                <div class="memberCard-one">
+                <!-- <div class="swiper-slide swiper-slide-p">
+                    <div class="memberCard-one">
                         <video class="member-video img-fluid" controls>
                             <source src="./video/VID-20221107-WA0019.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video> 
                     </div>
-                </div>
+                </div> -->
                 <div class="swiper-slide swiper-slide-p">
-                    <div class="memberCard" >
-                        <div class="memberImage">
-                            <a class="memberMoreInfo" href="https://www.google.com" target="_blank">
-                                <i class="fa-solid fa-plus"></i>
-                            </a>
-                        </div>
-                        <div class="memberContent">
-                            <p class="memberName">Reto Nause 2</p>
-                            <p class="memberInfo">Gemeinderat  </p>
-                            <p class="memberorg">Die Mitte</p>
-                        </div>
+                    <div class="memberCard-one">
+
+                        <video id="my-video" class="card-video video-js vjs-default-skin" controls preload="auto" 
+                        poster="./img/patrons/video-preload.png" data-setup="{}" height="100%">
+
+                        <source src="./video/VID-20221107-WA0019.mp4" class="member-video img-fluid card-video video-js" controls id="my-video"  data-setup="{}" type="video/mp4">
+                        <p class="vjs-no-js">
+                            To view this video please enable JavaScript, and consider upgrading to a
+                            web browser that
+                            <a href="https://videojs.com/html5-video-support/" target="_blank">
+                                supports HTML5 video</a>
+
                     </div>
                 </div>
                 <div class="swiper-slide swiper-slide-p">
-                    <div class="memberCard">
-                        <div class="memberImage">
+                    <div class="memberCard" >
+                        <div class="memberImage" style="background-image: url('./img/patrons/card-Reto.png');">
                             <a class="memberMoreInfo" href="https://www.google.com" target="_blank">
                                 <i class="fa-solid fa-plus"></i>
                             </a>
                         </div>
                         <div class="memberContent">
-                            <p class="memberName">Reto Nause 3</p>
+                            <p class="memberName">Reto Nause</p>
                             <p class="memberInfo">Gemeinderat Stadt Bern Director für Sicherheit, Umwelt und Energie </p>
                             <p class="memberorg">Die Mitte</p>
                         </div>
                     </div>
                 </div>
                 <div class="swiper-slide swiper-slide-p">
-                    <div class="memberCard" >
-                        <div class="memberImage">
+                    <div class="memberCard">
+                        <div class="memberImage" style="background-image: url('./img/patrons/card-Kathrin.png');">
                             <a class="memberMoreInfo" href="https://www.google.com" target="_blank">
                                 <i class="fa-solid fa-plus"></i>
                             </a>
                         </div>
                         <div class="memberContent">
-                            <p class="memberName">Reto Nause 4</p>
-                            <p class="memberInfo">Gemeinderat  </p>
-                            <p class="memberorg">Die Mitte</p>
+                            <p class="memberName">Kathrin Bertschy</p>
+                            <p class="memberInfo">Nationalrätin <br>Kanton Bern</p>
+                            <p class="memberorg">GLP</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide swiper-slide-p">
+                    <div class="memberCard" >
+                        <div class="memberImage" style="background-image: url('./img/patrons/card-Matthias.png');">
+                            <a class="memberMoreInfo" href="https://www.google.com" target="_blank">
+                                <i class="fa-solid fa-plus"></i>
+                            </a>
+                        </div>
+                        <div class="memberContent">
+                            <p class="memberName">Matthias Aebischer</p>
+                            <p class="memberInfo">Nationalrat <br>Kanton Bern  </p>
+                            <p class="memberorg">SP</p>
                         </div>
                     </div>
                 </div>
                 <div class="swiper-slide swiper-slide-p">
                     <div class="memberCard">
-                        <div class="memberImage">
+                        <div class="memberImage" style="background-image: url('./img/patrons/card-Gerhard.png');">
                             <a class="memberMoreInfo" href="https://www.google.com" target="_blank">
                                 <i class="fa-solid fa-plus"></i>
                             </a>
                         </div>
                         <div class="memberContent">
-                            <p class="memberName">Reto Nause 5</p>
-                            <p class="memberInfo">Gemeinderat Stadt Bern Director für Sicherheit, Umwelt und Energie </p>
+                            <p class="memberName">Gerhard Pfister</p>
+                            <p class="memberInfo">Nationalrat <br>Kanton Zug </p>
                             <p class="memberorg">Die Mitte</p>
                         </div>
                     </div>
                 </div>
                 <div class="swiper-slide swiper-slide-p">
                     <div class="memberCard" >
-                        <div class="memberImage">
+                        <div class="memberImage" style="background-image: url('./img/patrons/card-beatrice.png');">
                             <a class="memberMoreInfo" href="https://www.google.com" target="_blank">
                                 <i class="fa-solid fa-plus"></i>
                             </a>
                         </div>
                         <div class="memberContent">
-                            <p class="memberName">Reto Nause 6</p>
-                            <p class="memberInfo">Gemeinderat  </p>
-                            <p class="memberorg">Die Mitte</p>
+                            <p class="memberName">Beatrice Simone-Jungi</p>
+                            <p class="memberInfo">Ehem. <br> Regierungsrätin <br> Finanzdirektion
+                                </p>
+                            <p class="memberorg">Kanton Bern</p>
                         </div>
                     </div>
                 </div>
                 <div class="swiper-slide swiper-slide-p">
                     <div class="memberCard">
-                        <div class="memberImage">
+                        <div class="memberImage" style="background-image: url('./img/patrons/card-Bernd.png');">
                             <a class="memberMoreInfo" href="https://www.google.com" target="_blank">
                                 <i class="fa-solid fa-plus"></i>
                             </a>
                         </div>
                         <div class="memberContent">
-                            <p class="memberName">Reto Nause 7</p>
-                            <p class="memberInfo">Gemeinderat Stadt Bern Director für Sicherheit, Umwelt und Energie </p>
-                            <p class="memberorg">Die Mitte</p>
+                            <p class="memberName">Bernd Schildger</p>
+                            <p class="memberInfo">Ehem. Direktor</p>
+                            <p class="memberorg">Tierpark Bern</p>
                         </div>
                     </div>
                 </div>
                 <div class="swiper-slide swiper-slide-p">
                     <div class="memberCard" >
-                        <div class="memberImage">
+                        <div class="memberImage" style="background-image: url('./img/patrons/card-Wanja.png');">
                             <a class="memberMoreInfo" href="https://www.google.com" target="_blank">
                                 <i class="fa-solid fa-plus"></i>
                             </a>
                         </div>
                         <div class="memberContent">
-                            <p class="memberName">Reto Nause 8</p>
-                            <p class="memberInfo">Gemeinderat  </p>
-                            <p class="memberorg">Die Mitte</p>
+                            <p class="memberName">Wanja Greuel</p>
+                            <p class="memberInfo">COE, BSC Young Boys </p>
+                            <p class="memberorg">Reto Nause</p>
                         </div>
                     </div>
                 </div>
@@ -671,62 +688,79 @@
     <!-- │   COLABORADORES:                                        │ -->
     <!-- │ ► Diego Valentino Pardo Yepez                           │ -->
     <!-- │ ► Santiago Elias Carranza                               │ -->
+    <!-- │ ► Manuel Esteban Florez Lopez                           │ -->
     <!-- └─────────────────────────────────────────────────────────┘ -->
 
-    <footer class="footer_container">
-
-        <div class="footer_redsocial">
-            <div class="footer_redsocial_instragram">
-                <a class="link-instagram" href="https://www.instagram.com/humanfrontaid/" target="_blank">
-                    <img src="./img/layout/ig_logo.png" width="35px" height="35px" alt="Icono de Instagram">
-                    <p class="link-instagram-text">Instagram</p>
-                </a>
+    <footer>
+        <section class="footer-mobile" role="landmark">
+            <div class="footer-column-one">
+                <div class="footer-sm-box" role="list">
+                    <a class="footer-sm-item" role="listitem" href="https://www.instagram.com/humanfrontaid/" target="_blank">
+                        <img src="./img/Layout/ig_logo.png" alt="instagram logo" class="footer-logo-sm">
+                    </a>
+                    <a class="footer-sm-item" role="listitem" href="https://www.facebook.com/HUMANFRONTAID/" target="_blank">
+                        <img src="./img/Layout/fb_logo.png" alt="facebook logo" class="footer-logo-sm">
+                    </a>
+                    <a class="footer-sm-item" role="listitem" href="https://wa.me/+41335333344" target="_blank">
+                        <img src="./img/Layout/wpp_logo.png" alt="whatsapp logo" class="footer-logo-sm">
+                    </a>
+                </div>
+                <div class="footer-logo-box">
+                    <div class="footer-logo-img"></div>
+                    <span class="footer-span">Human Front Aid</span>
+                </div>
             </div>
-            <div class="footer_redsocial_facebook">
-                <a class="link-facebook" href="https://www.facebook.com/HUMANFRONTAID/" target="_blank">
-                    <img src="./img/layout/fb_logo.png" width="35px" height="35px" alt="Icono de Facebook">
-                    <p class="link-facebook-text">Facebook</p>
-                </a>
-            </div>
-            <div class="footer_redsocial_whatsapp">
-                <a class="link-whatsapp" href="https://wa.me/+41335333344" target="_blank">
-                    <img src="./img/layout/wpp_logo.png" width="35px" height="35px" alt="Icono de Whatsapp"> 
-                    <p class="link-whatsapp-text">Whatsapp</p>
-                </a>
-            </div>
-        </div>
-
-        <div class="footer_linea"></div>
             
-        <div class="footer_routes">
-            <div class="footer_routes_logo">
-                <img src="./img/layout/logo.png" alt="Logo de Human Front Aid">
-                <a class="navbar-brand navbar-titulo footer-titulo" href="./index.html">Human Front Aid</a>
+            <div class="footer-column-two">
+                <a class="footer-donate-btn" type="btn" href="./pages/want-to-help.html" data-translate='DONATE'>DONATE</a>
+                <a class="footer-need-btn" type="btn" href="./pages/need-help.html" data-translate='needHelp'>need-help?</a>
             </div>
-                
-            <div class="footer_routes_container_home_navigation">
+        </section>
 
-                <div class="footer_routes_home-aboutUs">
-                        <a class="nav-link navbar-link navbar-home" href="./index.html" data-translate='home'>Home</a>
-                        <a class="nav-link navbar-link navbar-about-us" href="./pages/about-us.html" data-translate='about'>About us</a>
-                </div>
-
-                <div class="footer_routes_navigation">
-
-                    <a class="btn btn-primary navbar-need-help footer-need-help" href="./pages/need-help.html" data-translate='needHelp'>Need help?</a>
-
-                    <a class="btn btn-warning navbar-donate footer-donate" href="./pages/want-to-help.html" data-translate='DONATE'>DONATE</a>
-
-                </div>
+        <section class="footer-desktop" role="landmark">
+            <div class="footer-sm-box" role="list">
+                <a class="footer-sm-item" role="listitem" href="https://wa.me/+41335333344" target="_blank">
+                    <img src="./img/Layout/wpp_logo.png" alt="whatsapp logo" class="footer-logo-sm">
+                    <span class="footer-span-logo">Whatsapp</span>
+                </a>
+                <a class="footer-sm-item" role="listitem" href="https://www.instagram.com/humanfrontaid/" target="_blank">
+                    <img src="./img/Layout/ig_logo.png" alt="instagram logo" class="footer-logo-sm">
+                    <span class="footer-span-logo">Instagram</span>
+                </a>
+                <a class="footer-sm-item" role="listitem" href="https://www.facebook.com/HUMANFRONTAID/" target="_blank">
+                    <img src="./img/Layout/fb_logo.png" alt="facebook logo" class="footer-logo-sm">
+                    <span class="footer-span-logo">Facebook</span>
+                </a>
             </div>
-        </div>
-    
+            <hr class="footer-hr"></hr>
+            <nav class="footer-nav">
+                <ul class="footer-nav-ul">
+                    <li class="footer-nav-li">
+                        <div class="footer-logo-img"></div>
+                        <span class="footer-span">Human Front Aid</span>
+                    </li>
+                    <li class="footer-nav-li">
+                        <a class="footer-home-btn" href="#" data-translate='home'>Home</a>
+                    </li>
+                    <li class="footer-nav-li">
+                        <a class="footer-about-btn" href="./pages/about-us.html" data-translate='about'>About us</a>
+                    </li>
+                    <li class="footer-nav-li">
+                        <a class="footer-need-btn" href="./pages/need-help.html" type="btn" data-translate='needHelp'>Need help?</a>
+                    </li>
+                    <li class="footer-nav-li">
+                        <a class="footer-donate-btn" href="./pages/want-to-help.html"type="btn" data-translate='DONATE'>DONATE</a>
+                    </li>
+                </ul>
+            </nav>
+        </section>
     </footer>
-
     <!-- ┌─────────────────────────────────────────────────────────┐ -->
     <!-- │ ■■■■■■■■■■■■■■■■■■■■■ FIN FOOTER ■■■■■■■■■■■■■■■■■■■■■■ │ -->
     <!-- └─────────────────────────────────────────────────────────┘ -->
 
     <script defer src="js/language/language.js"></script>
+    <!-- video js -->
+    <script src="https://vjs.zencdn.net/8.5.2/video.min.js"></script>
 </body>
 </html>
