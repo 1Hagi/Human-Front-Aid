@@ -16,7 +16,7 @@ header {
 /*  Header - Sección Títulos  */
 
 .header-titulo {
-    width: 700px;
+    width: 90%;
 }
 
 .header-subtitulo {
@@ -32,6 +32,13 @@ header {
 }
 
 .imagen-qr{
+    margin-left: 120px;
+    width: 30%;
+    height: 30%;
+    margin-top: -300px;
+}
+
+.imagen-qr-mobile{
     margin-left: 120px;
     width: 30%;
     height: 30%;
@@ -60,6 +67,12 @@ header {
 
 #icono-zahlteil:hover{
     content: url(../img/donate/icon-zahlteil-enabled.jpg);
+}
+
+.btn-qr-active:hover {
+    -webkit-box-shadow: 0px 0px 10px 5px var(--color-tres);
+    -moz-box-shadow: 0px 0px 10px 5px var(--color-tres);
+    box-shadow: 0px 0px 10px 5px var(--color-tres);
 }
 
 /* ┌─────────────────────────────────────────────────────────┐ */
@@ -239,6 +252,14 @@ header {
         margin-bottom: -40%;
     }
 
+    .imagen-qr-mobile{
+        margin-left: 15%;
+        width: 45%;
+        height: 45%;
+        margin-top: 0px;
+        margin-bottom: -40%;
+    }
+
 
     /* ┌─────────────────────────────────────────────────────────┐ */
     /* │ ■■■■■■■■■■■■■■■■■■■■■ FIN HEADER ■■■■■■■■■■■■■■■■■■■■■■ │ */
@@ -287,6 +308,13 @@ header {
     }
     
     .imagen-qr{
+        margin-left: -300px;
+        width: 270px;
+        height: 270px;
+        margin-top: 0px;
+        margin-bottom: -350px;
+    }
+    .imagen-qr-mobile{
         margin-left: -300px;
         width: 270px;
         height: 270px;
