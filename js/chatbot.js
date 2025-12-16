@@ -1,27 +1,30 @@
+// box.classList.add("show");
+// box.classList.remove("show");
+
 function openChat() {
-    document.getElementsByClassName('chatbot-button')[0].setAttribute('style', 'display: none;');
-    document.getElementById('chatbot-ventana-container').setAttribute('style', 'display: block;');
+    document.getElementsByClassName('chatbot-button')[0].classList.remove("show");
+    document.getElementById('chatbot-ventana-container').classList.add("show");
     if (screen.width >= 320 && screen.width <= 480) {
-        document.getElementById('focus').setAttribute('style', 'display: block;');
+        document.getElementById('focus').classList.add("show");
     }
 }
 
 function closeChat() {
-    document.getElementsByClassName('chatbot-button')[0].setAttribute('style', 'display: block;');
-    document.getElementById('chatbot-ventana-container').setAttribute('style', 'display: none;');
-    document.getElementById('focus').setAttribute('style', 'display: none;');
+    document.getElementsByClassName('chatbot-button')[0].classList.add("show");
+    document.getElementById('chatbot-ventana-container').classList.remove("show");
+    document.getElementById('focus').classList.remove("show");
 }
 
 $(document).bind('keydown',function(eEvento){    
     if(eEvento.which == 27) {
-        document.getElementsByClassName('chatbot-button')[0].setAttribute('style', 'display: block;');
-        document.getElementById('chatbot-ventana-container').setAttribute('style', 'display: none;');
+        document.getElementsByClassName('chatbot-button')[0].classList.add("show");
+        document.getElementById('chatbot-ventana-container').classList.remove("show");
     }
 });
 
 function chooseMessage() {
     msgs = document.getElementsByClassName('msg');
-    $('#waitingBuble').css("display", "none");;
+    $('#waitingBuble').css("display", "none");
 
     for (msg of msgs) {
         msg.setAttribute('style', 'display: none;');

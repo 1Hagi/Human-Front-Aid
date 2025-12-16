@@ -101,6 +101,17 @@ a {
     transition: all ease 0.5s;
 }
 
+.fade {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 300ms ease, visibility 300ms ease;
+}
+
+.fade.show {
+    opacity: 1;
+    visibility: visible;
+}
+
 /* ┌─────────────────────────────────────────────────────────┐ */
 /* │ ■■■■■■■■■■■■■■■■■■■■ INICIO HEADER ■■■■■■■■■■■■■■■■■■■■ │ */
 /* │                                                         │ */
@@ -714,7 +725,6 @@ a {
 /* Chatbot - seccion ventana - containers */
 
 #chatbot-ventana-container {
-    display: none;
     flex-direction: column;
     position: fixed;
     bottom: 0;
@@ -827,7 +837,6 @@ a {
     margin-top: 1em;
     border-radius: 15px;
     overflow: hidden;
-    animation: burbuja 1.5s infinite;
 }
 
 .waiting-circle {
@@ -835,78 +844,23 @@ a {
     margin-left: 5px;
     margin-right: 5px;
     color: #BCBCBC;
-    animation: puntos 1.5s infinite;
-}
-
-@keyframes burbuja {
-    from {
-        width: 70px;
-        padding-left: 10px;
-        padding-bottom: 20px;
-        padding-top: 28px;
-        margin-left: 0;
-    }
-
-    50% {
-        width: 75px;
-        padding-left: 13px;
-        padding-bottom: 15px;
-        padding-top: 33px;
-        margin-left: 5px;
-    }
-
-    to {
-        width: 70px;
-        padding-left: 10px;
-        padding-bottom: 20px;
-        padding-top: 28px;
-        margin-left: 0;
-    }
+    animation: puntos 1.2s infinite;
 }
 
 @keyframes puntos {
     from {
-        font-size: 6px;
+        transform: scale(1.0);
     }
 
     50% {
-        font-size: 7px;
+        transform: scale(1.6);
     }
 
     to {
-        font-size: 6px;
+        transform: scale(1.0);
     }
 }
 
-.entrychat {
-    animation: entrychat 0.5s;
-}
-
-@keyframes entrychat {
-    from {
-        padding-top: 10px;
-        padding-bottom: 10px;
-        font-size: 16px;
-    }
-
-    40% {
-        padding-top: 13px;
-        padding-bottom: 13px;
-        font-size: 16.2px;
-    }
-
-    60% {
-        padding-top: 13px;
-        padding-bottom: 13px;
-        font-size: 16.2px;
-    }
-
-    to {
-        padding-top: 10px;
-        padding-bottom: 10px;
-        font-size: 16px;
-    }
-}
 
 /* Chatbot - seccion ventana - choose */
 
@@ -941,7 +895,6 @@ a {
 /* Extra Effects - Focus */
 
 #focus {
-    display: none;
     position: fixed;
     top: 0;
     width: 100%;
