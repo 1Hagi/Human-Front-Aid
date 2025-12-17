@@ -1,33 +1,4 @@
 /* ┌─────────────────────────────────────────────────────────┐ */
-/* │ ■■■■■■■■■■■■■■■■■■■■ INICIO HEADER ■■■■■■■■■■■■■■■■■■■■ │ */
-/* │                                                         │ */
-/* │   COLABORADORES:                                        │ */
-/* │ ► Diego N. Cabrera                                      │ */
-/* │ ► Luis Romano                                           │ */
-/* └─────────────────────────────────────────────────────────┘ */
-
-/*  Header - Sección Navbar  */
-
-header {
-    height: 970px;
-}
-
-/*  Header - Sección Títulos  */
-
-.header-titulo {
-    width: 442px;
-}
-
-.header-subtitulo {
-    width: 440px;
-}
-
-/* ┌─────────────────────────────────────────────────────────┐ */
-/* │ ■■■■■■■■■■■■■■■■■■■■■ FIN HEADER ■■■■■■■■■■■■■■■■■■■■■■ │ */
-/* └─────────────────────────────────────────────────────────┘ */
-
-
-/* ┌─────────────────────────────────────────────────────────┐ */
 /* │ ■■■■■■■■■■■■■■■■■■ INICIO ABOUT-US ■■■■■■■■■■■■■■■■■■■■ │ */
 /* │                                                         │ */
 /* │   COLABORADORES:                                        │ */
@@ -161,7 +132,7 @@ header {
 }
 
 .memberCard {
-    background-color: #003A7D;
+    background-color: var(--color-ocho);
     width: 145px;
     height: fit-content;
     color: black;
@@ -243,7 +214,9 @@ header {
 }
 
 .memberCard .memberContent .memberorg {
+    font-family: var(--font-family-lato);
     margin: auto 0px 0px 0px;
+    font-weight: 500;
     padding-bottom: 2px;
     font-size: 0.8rem;
 }
@@ -336,6 +309,20 @@ header {
     transform: scale(1.04);
 }
 
+.swiper-slide-pan::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(15, 15, 15, 0.6) 20%,
+    rgba(0, 0, 0, 0) 40%
+  );
+  pointer-events: none;
+  border-radius: 10px;
+  z-index: 0;
+}
+
 
 .swiper-slide-img {
     width: 100%;
@@ -343,7 +330,7 @@ header {
     border-radius: 10px;
     margin-left: auto;
     margin-right: auto;
-    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.12);
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.12);  
 }
 
 .swiper-slide-btn {
@@ -351,10 +338,11 @@ header {
     width: 32px;
     height: 32px;
     position: absolute;
-    right: 15px;
-    bottom: 15px;
+    right: 10px;
+    bottom: 10px;
     background: #FFD500;
     border: #FFD500;
+    z-index: 1;
 }
 
 /* ┌─────────────────────────────────────────────────────────┐ */
@@ -371,12 +359,13 @@ header {
 /* └─────────────────────────────────────────────────────────┘ */
 
 #map {
-
     padding: 0 var(--margin-desktop-1);
     width: 75%;
     margin-top: 50px;
     height: 500px;
+    max-width: 1200px;
     margin-bottom: 50px;
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.12);
 }
 
 /* ┌─────────────────────────────────────────────────────────┐ */
@@ -404,12 +393,6 @@ header {
     /* │ ► Diego N. Cabrera                                      │ */
     /* │ ► Luis Romano                                           │ */
     /* └─────────────────────────────────────────────────────────┘ */
-
-    /*  Header - Sección Navbar  */
-
-    header {
-        height: auto;
-    }
 
     /*  Header - Sección Títulos  */
 
@@ -590,7 +573,9 @@ header {
     /* │ ► Luis Romano                                           │ */
     /* └─────────────────────────────────────────────────────────┘ */
 
-
+    header {
+        height: auto;
+    }
 
     /* ┌─────────────────────────────────────────────────────────┐ */
     /* │ ■■■■■■■■■■■■■■■■■■■■■ FIN HEADER ■■■■■■■■■■■■■■■■■■■■■■ │ */
@@ -961,11 +946,6 @@ header {
         margin-left: var(--margin-desktop-1);
     }
 
-    .swiper-pagination-pan {
-        margin-bottom: 10px;
-    }
-
-
 }
 
 /*
@@ -1000,4 +980,17 @@ header {
         height: 100%;
         width: 100%;
     }
+}
+
+@media(min-width: 1536px) {
+
+    .swiperPressAndNews {
+        height: 800px;
+    }
+
+    .swiper-slide-btn {
+        width: 52px;
+        height: 52px;
+    }
+
 }

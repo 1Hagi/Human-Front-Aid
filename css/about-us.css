@@ -1,32 +1,4 @@
 /* ┌─────────────────────────────────────────────────────────┐ */
-/* │ ■■■■■■■■■■■■■■■■■■■■ INICIO HEADER ■■■■■■■■■■■■■■■■■■■■ │ */
-/* │                                                         │ */
-/* │   COLABORADORES:                                        │ */
-/* │ ► Diego N. Cabrera                                      │ */
-/* │ ► Luis Romano                                           │ */
-/* └─────────────────────────────────────────────────────────┘ */
-
-/*  Header - Sección Navbar  */
-
-header {
-    height: 970px;
-}
-
-.header-titulo {
-    width: 442px;
-}
-
-.header-subtitulo {
-    width: 440px;
-}
-
-/* ┌─────────────────────────────────────────────────────────┐ */
-/* │ ■■■■■■■■■■■■■■■■■■■■■ FIN HEADER ■■■■■■■■■■■■■■■■■■■■■■ │ */
-/* └─────────────────────────────────────────────────────────┘ */
-
-
-
-/* ┌─────────────────────────────────────────────────────────┐ */
 /* │ ■■■■■■■■■■■■■■■■■■ INICIO ABOUT-US ■■■■■■■■■■■■■■■■■■■■ │ */
 /* │                                                         │ */
 /* │   COLABORADORES:                                        │ */
@@ -35,41 +7,47 @@ header {
 /* │ ► Luis Fernando Callisaya Surco                         │ */
 /* └─────────────────────────────────────────────────────────┘ */
 
-.about-us-main p {
-    font-size: 1.3vw;
-    color: var(--color-cinco);
-    max-width: 100%;
-    font-family: var(--font-family-poppins);
-    font-weight: 500;
-    text-align: justify;
-    height: auto;
-    padding: 0px 40px;
-}
-
-.about-us-main-img {
+#about-us {
     display: flex;
-    max-width: 100%;
-    margin-bottom: 50px;
-    border-radius: 10px;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-left: var(--margin-desktop-2);
+    margin-right: var(--margin-desktop-2);
+    margin-bottom: 80px;
 }
 
-
-.about-us-main {
-    margin-bottom: 100px;
-   
+.au-column-1 {
+    width: calc(50% - 20px);
 }
 
-.about-us-history-img {
-    max-width: 150%;
+.au-column-2 {
+    width: calc(55% - 20px);
 }
 
-.history-titulo {
+.au-column-3 {
+    width: calc(45% - 20px);
+}
+
+.au-imagen {
+    width: 100%;
+    border-radius: 15px;
+    padding: 5px;
+}
+
+.au-text {
+    font-size: 1.57vw;
+    text-align: justify;
+    color: var(--color-cinco);
+}
+
+.au-title {
+    width: 100%;
     color: var(--color-dos);
     font-family: var(--font-family-lato);
     font-weight: 570;
-    margin-bottom: 50px;
+    margin-bottom: 0;
 }
-    
+
 /* ┌─────────────────────────────────────────────────────────┐ */
 /* │ ■■■■■■■■■■■■■■■■■■■■ FIN ABOUT-US ■■■■■■■■■■■■■■■■■■■■■ │ */
 /* └─────────────────────────────────────────────────────────┘ */
@@ -89,37 +67,6 @@ header {
 @media (min-width: 320px ) and (max-width: 480px) {
 
     /* ┌─────────────────────────────────────────────────────────┐ */
-    /* │ ■■■■■■■■■■■■■■■■■■■■ INICIO HEADER ■■■■■■■■■■■■■■■■■■■■ │ */
-    /* │                                                         │ */
-    /* │   COLABORADORES:                                        │ */
-    /* │ ► Diego N. Cabrera                                      │ */
-    /* │ ► Luis Romano                                           │ */
-    /* └─────────────────────────────────────────────────────────┘ */
-
-    /*  Header - Sección Navbar  */
-
-    header {
-        height: auto;
-    }
-
-    /* Header - Títulos */
-
-    .header-titulo {
-        width: 80%;
-    }
-
-    .header-subtitulo {
-        width: 190px;
-        text-align: justify;
-    }
-
-    /* ┌─────────────────────────────────────────────────────────┐ */
-    /* │ ■■■■■■■■■■■■■■■■■■■■■ FIN HEADER ■■■■■■■■■■■■■■■■■■■■■■ │ */
-    /* └─────────────────────────────────────────────────────────┘ */
-
-
-
-    /* ┌─────────────────────────────────────────────────────────┐ */
     /* │ ■■■■■■■■■■■■■■■■■■ INICIO ABOUT-US ■■■■■■■■■■■■■■■■■■■■ │ */
     /* │                                                         │ */
     /* │   COLABORADORES:                                        │ */
@@ -128,29 +75,25 @@ header {
     /* │ ► Luis Fernando Callisaya Surco                         │ */
     /* └─────────────────────────────────────────────────────────┘ */
 
-    .about-us-main p {
-        font-size: 90%;
-
+    #about-us {
+        margin-left: var(--margin-mobile);
+        margin-right: var(--margin-mobile);
     }
 
-    .about-us-main {
-        margin-left: 0px;
-        margin-right: 0px; 
+    .au-column-1, .au-column-2, .au-column-3 {
+        width: 100%;
     }
 
-    .history-titulo {
-        font-size: 250%;
-        margin-bottom: 30px;
-    }
+    .a { order: 2; }
+    .b { order: 1; }
+    .c { order: 3; }
+    .d { order: 5; }
+    .e { order: 4; }
 
-    .about-us-text {
-        font-size: 120%;
-        margin-bottom: 30px;
-        margin-top: 50px       
-    }
-
-    .about-us-main-img {
-        margin-bottom: 20px;
+    .au-text {
+        font-size: 5vw;
+        text-align: justify;
+        color: var(--color-cinco);
     }
 
     /* ┌─────────────────────────────────────────────────────────┐ */
@@ -175,21 +118,6 @@ header {
 @media (min-width: 481px ) and (max-width: 992px) {
 
     /* ┌─────────────────────────────────────────────────────────┐ */
-    /* │ ■■■■■■■■■■■■■■■■■■■■ INICIO HEADER ■■■■■■■■■■■■■■■■■■■■ │ */
-    /* │                                                         │ */
-    /* │   COLABORADORES:                                        │ */
-    /* │ ► Diego N. Cabrera                                      │ */
-    /* │ ► Luis Romano                                           │ */
-    /* └─────────────────────────────────────────────────────────┘ */
-
-
-
-    /* ┌─────────────────────────────────────────────────────────┐ */
-    /* │ ■■■■■■■■■■■■■■■■■■■■■ FIN HEADER ■■■■■■■■■■■■■■■■■■■■■■ │ */
-    /* └─────────────────────────────────────────────────────────┘ */
-
-
-    /* ┌─────────────────────────────────────────────────────────┐ */
     /* │ ■■■■■■■■■■■■■■■■■■ INICIO ABOUT-US ■■■■■■■■■■■■■■■■■■■■ │ */
     /* │                                                         │ */
     /* │   COLABORADORES:                                        │ */
@@ -197,27 +125,16 @@ header {
     /* │ ► Luis Romano                                           │ */
     /* │ ► Luis Fernando Callisaya Surco                         │ */
     /* └─────────────────────────────────────────────────────────┘ */
-
-    .about-us-main p {
-        font-size: 120%;
+    
+    #about-us {
+        margin-left: var(--margin-desktop-1);
+        margin-right: var(--margin-desktop-1);
     }
 
-    .about-us-main {
-        margin-left: 10px;
-        margin-right: 10px;
-    }
-
-    .about-us-text {
-        margin-bottom: 30px;
-        margin-top: 50px;
-    }
-
-    .history-titulo {
-        font-size: 250%;
-    }
-
-    .about-us-main-img {
-        margin-bottom: 30px;
+    .au-text {
+        font-size: 1.8vw;
+        text-align: justify;
+        color: var(--color-cinco);
     }
 
     /* ┌─────────────────────────────────────────────────────────┐ */

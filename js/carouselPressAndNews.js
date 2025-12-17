@@ -27,7 +27,7 @@ var swiper = new Swiper(".swiperPressAndNews", {
       },
       993: {
         slidesPerView: 3,
-        spaceBetween: 15,
+        spaceBetween: 25,
         grid: {
           rows: 2,
         },

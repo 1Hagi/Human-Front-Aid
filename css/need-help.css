@@ -6,12 +6,6 @@
 /* │ ► Luis Romano                                           │ */
 /* └─────────────────────────────────────────────────────────┘ */
 
-/*  Header - Sección Navbar  */
-
-header {
-    height: 970px;
-}
-
 /*  Header - Sección Títulos  */
 
 .header-titulo {
@@ -154,13 +148,6 @@ header {
     /* │ ► Diego N. Cabrera                                      │ */
     /* │ ► Luis Romano                                           │ */
     /* └─────────────────────────────────────────────────────────┘ */
-
-
-    /*  Header - Sección Navbar  */
-
-    header {
-        height: auto;
-    }
 
     /* Header - Títulos */
 
